@@ -6,6 +6,21 @@
   <title>TIME TO DO</title>
 </head>
 <body>
+
+  <form class="form" id="js-form">
+    <input type="text" class="form__input" placeholder="Enter something to do..." />
+  </form>
+  <div class="todo">
+    <div class="todo__column">
+      <h2 class="todo__title">Todo</h2>
+      <ul class="todo__list" id="js-pending"></ul>
+    </div>
+    <div class="todo__column">
+      <h2 class="todo__title">Done</h2>
+      <ul class="todo__list todo__list--done" id="js-done"></ul>
+    </div>
+  </div>
+
   <script src="./src/index.js"></script>
 </body>
 </html>
