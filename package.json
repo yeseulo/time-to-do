@@ -10,6 +10,6 @@
     "build": "parcel build index.html"
   },
   "devDependencies": {
-    "sass": "^1.26.10"
+    "node-sass": "^4.14.1"
   }
 }
