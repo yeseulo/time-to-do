@@ -3,38 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TIME TO DO</title>
+  <title>It's time to do ...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="wrap">
+    <header class="header" role="banner">
+      <h2 class="clock" id="js-clock">00:00:00</h2>
+      <form class="form--user" id="js-form-user">
+        <input type="text" name="" id="" placeholder="What's your name?">
+      </form>
+      <h4 class="username" id="js-username">Hello</h4>
+    </header>
 
-  <header class="header">
-    <h1 class="title">It's time to do ...</h1>
-    <h2 class="clock" id="js-clock">00:00:00</h2>
-    <form class="form form--user" id="js-form-user">
-      <input type="text" name="" id="" placeholder="What's your name?">
-    </form>
-    <h4 class="username" id="js-username">Hello</h4>
-  </header>
+    <main class="main" role="main">
+      <form class="form--todo" id="js-form">
+        <input type="text" class="form__input" placeholder="Enter something to do..." />
+      </form>
+      <section class="todo">
+        <div class="todo__column">
+          <h2 class="todo__title">Todo</h2>
+          <ul class="todo__list" id="js-pending"></ul>
+        </div>
+        <div class="todo__column">
+          <h2 class="todo__title">Done</h2>
+          <ul class="todo__list todo__list--done" id="js-done"></ul>
+        </div>
+      </section>
+    </main>
 
-  <form class="form" id="js-form">
-    <input type="text" class="form__input" placeholder="Enter something to do..." />
-  </form>
-  <section class="todo">
-    <div class="todo__column">
-      <h2 class="todo__title">Todo</h2>
-      <ul class="todo__list" id="js-pending"></ul>
-    </div>
-    <div class="todo__column">
-      <h2 class="todo__title">Done</h2>
-      <ul class="todo__list todo__list--done" id="js-done"></ul>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="weather" id="js-weather"></div>
-    <div class="copyright">Copyright &copy; yeseulo</div>
-  </footer>
-
-  <script src="./src/index.js"></script>
+    <footer class="footer" role="contentinfo">
+      <div class="weather" id="js-weather"></div>
+      <div class="copyright">Copyright &copy; TIME TO DO</div>
+    </footer>
+  </div>
+  <script src="./src/scripts/index.js"></script>
 </body>
 </html>
