@@ -7,18 +7,19 @@
 </head>
 <body>
 
-  <section class="head">
-    <h1 class="clock" id="js-clock">00:00:00</h1>
+  <header class="header">
+    <h1 class="title">It's time to do ...</h1>
+    <h2 class="clock" id="js-clock">00:00:00</h2>
     <form class="form form--user" id="js-form-user">
       <input type="text" name="" id="" placeholder="What's your name?">
     </form>
     <h4 class="username" id="js-username">Hello</h4>
-  </section>
+  </header>
 
   <form class="form" id="js-form">
     <input type="text" class="form__input" placeholder="Enter something to do..." />
   </form>
-  <div class="todo">
+  <section class="todo">
     <div class="todo__column">
       <h2 class="todo__title">Todo</h2>
       <ul class="todo__list" id="js-pending"></ul>
@@ -27,7 +28,12 @@
       <h2 class="todo__title">Done</h2>
       <ul class="todo__list todo__list--done" id="js-done"></ul>
     </div>
-  </div>
+  </section>
+
+  <footer class="footer">
+    <div class="weather" id="js-weather"></div>
+    <div class="copyright">Copyright &copy; yeseulo</div>
+  </footer>
 
   <script src="./src/index.js"></script>
 </body>
