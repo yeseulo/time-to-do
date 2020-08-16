@@ -1,4 +1,3 @@
-import '../style.scss';
 import './clock';
 import './user';
 import './todo';
