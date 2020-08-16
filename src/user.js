@@ -2,7 +2,7 @@ const form = document.getElementById('js-form-user');
 const input = form.querySelector('input');
 const username = document.getElementById('js-username');
 
-const USER_LS = 'currentUser',
+const USER_LS = 'USER',
       ACTIVE_CLASSNAME = 'show';
 
 function saveName(name) {
