@@ -1,5 +1,6 @@
-require('./clock.js');
-require('./user.js');
-require('./todo.js');
-require('./weather.js');
-require('./background.js');
+import '../style.scss';
+import './clock';
+import './user';
+import './todo';
+import './weather';
+import './background';
