@@ -1,3 +1,9 @@
+$brand: #000;
+
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
 }
@@ -5,10 +11,104 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 300;
   font-size: 14px;
-  background-color: #eee;
+  line-height: 1.4285;
+  background-color: #faf7ee;
 }
+
+.wrap {
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &.bg1 { background-image: url(./images/bg1.jpg);}
+  &.bg2 { background-image: url(./images/bg2.jpg);}
+  &.bg3 { background-image: url(./images/bg3.jpg);}
+  &.bg4 { background-image: url(./images/bg4.jpg);}
+  &.bg5 { background-image: url(./images/bg5.jpg);}
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+
+  border-bottom: 1px solid $brand;
+  font-size: 18px;
+
+  @media only screen and (max-width: 767px) {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    height: 50px;
+  }
+
+  &__column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+      padding: 0 20px;
+      flex-direction: row;
+    }
+
+    &.column--left {
+      margin-bottom: 10px;
+      justify-content: space-between;
+      @media only screen and (min-width: 768px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.main {
+  padding-top: 121px;
+  padding-bottom: 36px;
+  height: 100%;
+  @media only screen and (min-width: 768px) {
+padding-top: 50px;
+  padding-bottom: 36px;
+  }
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 10px;
+  line-height: 1;
+  border-top: 1px solid $brand;
+
+  .copyright {
+    margin-top: 5px;
+  }
+}
+
+.clock {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: normal;
+  }
 
 .form--user,
 .username {
@@ -16,5 +116,169 @@ body {
 
   &.show {
     display: block;
+  }
+}
+.username {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+input[type="text"] {
+  width: 240px;
+  height: 26px;
+  padding: 0 4px;
+  border: 0;
+  font-size: 14px;
+  background: none;
+  ::placeholder {
+    color: #999;
+  }
+  &:focus {
+    outline: $brand dashed 1px;
+  }
+}
+
+
+.form--todo {
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+
+  @media only screen and (max-width: 767px) {
+    label { display: none; }
+    input { text-align: center;}
+  }
+
+  // &__title {
+  //   margin-top: 0;
+  //   margin-bottom: 10px;
+  //   font-size: 14px;
+  // }
+}
+
+.todo {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+  &__column {
+    position: relative;
+    height: 50%;
+    width: 100%;
+    overflow-y: auto;
+    padding: 20px;
+
+    @media only screen and (min-width: 768px) {
+      width: 50%;
+      height: 100%;
+    }
+
+    &.column--right {
+      .todo__title {
+        left: 50%;
+        right: 0;
+      }
+    }
+
+    &+.todo__column {
+      border-top: 1px solid $brand;
+      @media only screen and (min-width: 768px) {
+        border-left: 1px solid $brand;
+        border-top: none;
+      }
+    }
+  }
+
+  &__title {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+
+    @media only screen and (min-width: 768px) {
+      position: fixed;
+      top: 50px;
+      left: 0;
+      right: 50%;
+      padding: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-left: 0;
+    list-style: none;
+    @media only screen and (min-width: 768px) {
+      margin-top: 56px;
+    }
+
+    li {
+      position: relative;
+      margin-top: 10px;
+      padding-left: 24px;
+      font-size: 18px;
+      &:first-child { margin-top: 0; }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '⚐';
+        width: 18px;
+        display: block;
+      }
+    }
+
+    span {
+      margin-right: 10px;
+    }
+
+    button {
+      margin-right: 10px;
+      padding: 0;
+      width: 24px;
+      height: 24px;
+      font-size: 20px;
+      line-height: 1;
+      text-align: center;
+      border: 0;
+      border-radius: 0;
+      background: none;
+      border-bottom: 1px solid $brand;
+      cursor: pointer;
+
+      &:active,
+      &:focus {
+        outline: #eee dashed 1px;
+      }
+    }
+
+    .btn-delete {
+      color: $brand
+    }
+    .btn-check {
+      color: $brand
+    }
+    .btn-undo {
+      color: $brand
+    }
+
+    &--done {
+      li {
+        color: #999;
+
+        &::before {
+          content: '⚑';
+        }
+      }
+    }
   }
 }

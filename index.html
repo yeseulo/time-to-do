@@ -4,28 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>It's time to do ...</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="wrap">
     <header class="header" role="banner">
-      <h2 class="clock" id="js-clock">00:00:00</h2>
-      <form class="form--user" id="js-form-user">
-        <input type="text" name="" id="" placeholder="What's your name?">
-      </form>
-      <h4 class="username" id="js-username">Hello</h4>
+      <div class="header__column column column--left">
+        <h2 class="clock" id="js-clock">00:00:00</h2>
+        <form class="form--user" id="js-form-user">
+          <input type="text" name="" id="" placeholder="What's your name?">
+        </form>
+        <h4 class="username" id="js-username">Hello</h4>
+      </div>
+      <div class="header__column column column--right">
+        <form class="form--todo" id="js-form">
+          <label>TO DO: </label>
+          <input type="text" placeholder="Enter something to do..." />
+        </form>
+      </div>
     </header>
 
     <main class="main" role="main">
-      <form class="form--todo" id="js-form">
-        <input type="text" class="form__input" placeholder="Enter something to do..." />
-      </form>
       <section class="todo">
-        <div class="todo__column">
+        <div class="todo__column column--left">
           <h2 class="todo__title">Todo</h2>
           <ul class="todo__list" id="js-pending"></ul>
         </div>
-        <div class="todo__column">
+        <div class="todo__column column--right">
           <h2 class="todo__title">Done</h2>
           <ul class="todo__list todo__list--done" id="js-done"></ul>
         </div>
@@ -33,8 +38,8 @@
     </main>
 
     <footer class="footer" role="contentinfo">
-      <div class="weather" id="js-weather"></div>
       <div class="copyright">Copyright &copy; TIME TO DO</div>
+      <div class="weather" id="js-weather"></div>
     </footer>
   </div>
   <script src="./src/scripts/index.js"></script>
