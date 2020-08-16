@@ -1,14 +1,13 @@
-/** @format */
-
 const form = document.getElementById('js-form'),
-  input = form.querySelector('input'),
-  pendingList = document.getElementById('js-pending'),
-  doneList = document.getElementById('js-done');
+      input = form.querySelector('input'),
+      pendingList = document.getElementById('js-pending'),
+      doneList = document.getElementById('js-done');
 
 const PENDING_LS = 'PENDING',
-  DONE_LS = 'DONE';
+      DONE_LS = 'DONE';
 
-let pendingTasks = [], doneTasks = [];
+let pendingTasks = [],
+    doneTasks = [];
 
 // Task object
 function getTaskObject(text) {
