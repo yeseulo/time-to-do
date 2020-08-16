@@ -53,12 +53,12 @@ body {
 }
 
 .main {
-  padding-top: 106px;
+  padding-top: 119px;
   padding-bottom: 36px;
   height: 100%;
   @media only screen and (min-width: 768px) {
-padding-top: 50px;
-  padding-bottom: 36px;
+    padding-top: 50px;
+    padding-bottom: 36px;
   }
 }
 
@@ -106,6 +106,7 @@ padding-top: 50px;
   margin-top: 0;
   margin-bottom: 0;
   font-size: 14px;
+  line-height: 1.47368421;
   @media only screen and (min-width: 768px) {
     font-size: 18px;
   }
@@ -118,8 +119,13 @@ input[type="text"] {
   border: 0;
   font-size: 14px;
   background: none;
+  text-align: center;
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+  }
+
   ::placeholder {
-    color: #999;
+    color: #666;
   }
   &:focus {
     outline: $brand dashed 1px;
@@ -132,12 +138,12 @@ input[type="text"] {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
+  margin-top: 5px;
+  label { display: none; }
 
-  @media only screen and (max-width: 767px) {
-    label { display: none; }
-    input { text-align: center;}
+  @media only screen and (min-width: 768px) {
+    label { display: block; }
   }
-
 }
 
 .todo {
