@@ -7,9 +7,9 @@
   "scripts": {
     "start": "parcel index.html -p 2323",
     "watch": "parcel watch index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --public-url /timetodo/",
     "deploy": "gh-pages -d dist",
-    "predeploy": "yarn run build"
+    "predeploy": "rm -rf dist/ && yarn run build"
   },
   "homepage": "https://yeseulo.github.io/timetodo",
   "devDependencies": {
